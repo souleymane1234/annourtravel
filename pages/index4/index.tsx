@@ -17,6 +17,7 @@ import Payment from '../../component/section-pages/Payment';
 import Footer from '../../component/section-pages/footer';
 import ScrollToTopBtn from '../../component/layout/ScrollToTop';
 import { createGlobalStyle } from 'styled-components';
+import SwiperComponent from '../../component/section-pages/slider-home';
 
 const image1 ="../../img/background/3.webp";
 
@@ -58,6 +59,7 @@ export default function Home() {
       {/* home static */}
       <section className="no-padding">
         <Homestatic/>
+        {/* <SwiperComponent /> */}
       </section>
 
       {/* section */}

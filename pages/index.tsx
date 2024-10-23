@@ -18,6 +18,7 @@ import Payment from '../component/section-pages/Payment';
 import Footer from '../component/section-pages/footer';
 import ScrollToTopBtn from '../component/layout/ScrollToTop';
 import { createGlobalStyle } from 'styled-components';
+import HomestaticVideo from '../component/section-pages/homestatic-video';
 
 const image1 ="./img/background/3.webp";
 const image2 ="./img/background/2.webp";
@@ -64,7 +65,8 @@ export default function Home() {
 
       {/* slider */}
       <section className="no-padding">
-        <SwiperComponent />
+      <HomestaticVideo/>
+        {/* <SwiperComponent /> */}
       </section>
 
       {/* section 1 */}
@@ -78,9 +80,9 @@ export default function Home() {
       </section>
 
       {/* section 3 */}
-      <section className="no-bottom">
+      {/* <section className="no-bottom">
         <Reviews/>
-      </section>
+      </section> */}
 
       {/* section 4 */}
       <section className="no-bottom">

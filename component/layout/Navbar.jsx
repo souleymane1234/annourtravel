@@ -336,7 +336,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
 
           {/********* Side Button *********/}
           <div className="menu_side_area">
-              <Link href="#" className="btn-line" id="btn-line">Get Hosting</Link>
+              <Link href="#" className="btn-line" id="btn-line">Connexion</Link>
               {/********* Burger Button *********/}
               <button className="burgermenu" type="button" 
                 onClick={() => {

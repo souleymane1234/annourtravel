@@ -18,12 +18,14 @@ const Section = () => {
                         <div className="container z-1000">
                             <div className="row align-items-center">                        
                                 <div className="col-lg-10 offset-lg-1 text-center">
-                                    <div className="subtitle blink mb-4">Servers Are Available</div>
-                                    <h1 className="mb-0 ">Minecraft Server Hosting</h1>                                    
+                                    <div className="subtitle blink mb-4 hide-mobile">Nous sommes</div>
+                                    <h1 className="mb-0 ">Kode Gamers</h1>                                    
                                 </div>
                                 <div className="col-lg-6 offset-lg-3 text-center text-white">
-                                    <p className="">Aute velit non excepteur in eiusmod proident aute qui ullamco incididunt aliqua aliqua velit cillum deserunt dolore consectetur excepteur magna dolor enim voluptate dolore irure nulla culpa sint nulla do.</p>
-                                    <Link className="btn-main " href="#">Compare Our Plans</Link>
+                                    <p className="">
+                                        Le jeu en un endroit
+                                    </p>
+                                    <Link className="btn-main " href="#">Voir nos services</Link>
 
                                     <div className="spacer-single"></div>
 
@@ -36,7 +38,7 @@ const Section = () => {
                                             <i className="fa fa-star"></i>
                                         </span>
                                         <span className="d-val">4.85</span>
-                                        based on <strong>14086</strong> reviews.
+                                        basé sur <strong>14086</strong> votes.
                                     </div>
                                 </div>
                             </div>
