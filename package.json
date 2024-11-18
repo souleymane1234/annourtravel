@@ -35,6 +35,7 @@
     "react-scroll": "^1.8.6",
     "react-youtube": "^10.1.0",
     "sass": "^1.58.3",
+    "sharp": "^0.33.5",
     "styled-components": "^5.1.26",
     "swiper": "^10.0.0",
     "typescript": "4.9.5"

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const image1 ="../../img/misc/IMAGE_KODEGAMERZ_NOBG.png";
+import image1 from "../../public/img/misc/IMAGE_KODEGAMERZ_NOBG.png";
 
 const server = () => {
     return(

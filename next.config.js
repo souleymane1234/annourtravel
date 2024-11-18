@@ -13,7 +13,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    unoptimized: false, //will change to false later
+    unoptimized: true, //will change to false later
   },
 }
 
