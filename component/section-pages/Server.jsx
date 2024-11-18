@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const image1 ="../../img/misc/server.webp";
+const image1 ="../../img/misc/IMAGE_KODEGAMERZ_NOBG.png";
 
 const server = () => {
     return(
@@ -13,19 +13,16 @@ const server = () => {
                 </div>
 
                 <div className="col-lg-6">
-                    <div className="subtitle  mb-3">Server locations</div>
-                    <h2 className=""><span className="text-gradient">25</span> servers available worldwide for your game.</h2>
-                    <p className="">Our collection of game server hosting options encompasses the most in-demand platforms of today. Within our offerings, you&apos;ll discover an extensive array of specialized tools and features tailored to each game, all of which we diligently keep up to date in sync with game and mod updates.</p>
+                    <div className="subtitle  mb-3">Univers VAS</div>
+                    <h2 className=""><span className="text-gradient">#707*1#</span> et rentre dans la liste des gagnants chaque semaine</h2>
+                    <p className="">De nombreux lots sont disponibles</p>
 
                     <ul className="de-server">
-                        <li>London, England</li>
-                        <li>Paris, France</li>
-                        <li>Frankut, Germany</li>
-                        <li>Amsterdam, Netherlands</li>
-                        <li>Stockholm, Sweden</li>
-                        <li>Helsinki, Finland</li>
-                        <li>Los Angeles, USA</li>
-                        <li><Link href="#">View all available servers</Link></li>
+                        <li>Code de jeux</li>
+                        <li>Console de jeux</li>
+                        <li>Téléréalité</li>
+                        <li>Tournois</li>
+                        <li>Herbergement mutualisée</li>
                     </ul>
 
                 </div>

@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Playhost - Game Hosting Website Template</title>
+      <title>KODEGAMERZ - L'univers des gamers africains</title>
       <link rel="icon" href="../img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 
@@ -64,28 +64,28 @@ export default function Home() {
                 <div className="col-lg-4 offset-lg-4">
                     <div className="padding40 rounded-10 shadow-soft bg-dark-1" id="login">
                         <div className="text-center">
-                            <h4>Sign in to your account</h4>
+                            <h4>Bienvenue dans l&apos;univers KODEGAMERZ</h4>
                         </div>
                         <div className="spacer-10"></div>
-                        <form id="form_register" className="form-border" method="post" action="index.html">
+                        <form id="form_register" className="form-border">
                             <div className="field-set">
-                                <label>Username or email</label>
-                                <input type='text' name='name' id='name' className="form-control"/>
+                                <label>Numero de téléphone ou email</label>
+                                <input type='tel' name='numberTel' id='numberTel' className="form-control" placeholder='+2250102030405'/>
                             </div>
                             <div className="field-set">
-                                <label>Password</label>
-                                <input type='text' name='password' id='password' className="form-control"/>
+                                <label>Mot de passe</label>
+                                <input type='password' name='password' id='password' className="form-control"/>
                             </div>
                             <div className="field-set">
                                 <input type="checkbox" checked id="html" name="fav_language"/>
-                                <label><span className="op-5">&nbsp;Remember me</span></label><br/>
+                                <label><span className="op-5">&nbsp;Se rappeler de moi</span></label><br/>
                             </div>
                             <div className="spacer-20"></div>
                             <div id="submit">
-                                <input type="submit" id="send_message" value="Sign In" className="btn-main btn-fullwidth rounded-3" />
+                                <input type="button" id="send_message" value="Connectez-vous" className="btn-main btn-fullwidth rounded-3" />
                             </div>
                         </form>
-                        <div className="title-line">Or&nbsp;login&nbsp;up&nbsp;with</div>
+                        <div className="title-line">Ou&nbsp;connectez&nbsp;vous&nbsp;avec</div>
                         <div className="row g-2">
                             <div className="col-lg-6">
                                 <Link className="btn-sc btn-fullwidth mb10" to="#"><Image src={image2} alt=""/>Google</Link>

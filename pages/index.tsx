@@ -5,7 +5,7 @@ import { Parallax } from "react-parallax";
 import { Link } from "react-scroll";
 import Navbar from '../component/layout/Navbar';
 import Preloader from '../component/layout/preloader';
-import SwiperComponent from '../component/section-pages/slider-home';
+import SwiperComponent from '../component/section-pages/slider';
 import Section1 from '../component/section-pages/section-1';
 import Section2 from '../component/section-pages/section-2';
 import Reviews from '../component/section-pages/CustomerReviews';
@@ -19,7 +19,8 @@ import Footer from '../component/section-pages/footer';
 import ScrollToTopBtn from '../component/layout/ScrollToTop';
 import { createGlobalStyle } from 'styled-components';
 import HomestaticVideo from '../component/section-pages/homestatic-video';
-
+import Sectioncol from '../component/section-pages/section-3col';
+import Location from '../component/section-pages/Location';
 const image1 ="./img/background/3.webp";
 const image2 ="./img/background/2.webp";
 
@@ -46,7 +47,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Playhost - Game Hosting Website Template</title>
+      <title>KodeGamerz - Le reseau social des gamers africain</title>
       <link rel="icon" href="./img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 
@@ -61,17 +62,40 @@ export default function Home() {
     <div className="home dark-scheme">
       <header id="header-wrap">
          <Navbar />
-      </header>
+        </header>
+        
+        {/* slider */}
+      <section className="no-padding">
+        <SwiperComponent />
+        </section>
+        {/* section 4 */}
+      <section className="no-bottom">
+        <Servers/>
+      </section>
+        
+         {/* section 5 */}
+      <Parallax className="" bgImage={image1} strength={300}>  
+        <div className="de-gradient-edge-top"></div>
+        <div className="de-gradient-edge-bottom"></div>
+        <section className="no-bg">
+          <Collection/>
+        </section>
+        </Parallax>
+
+        
 
       {/* slider */}
       <section className="no-padding">
       <HomestaticVideo/>
         {/* <SwiperComponent /> */}
-      </section>
+        </section>
+        
+       
+        
+        
 
-      {/* section 1 */}
-      <section className="no-bottom">
-        <Section1/>
+       <section className="no-bottom">
+        <Location/>
       </section>
 
       {/* section 2 */}
@@ -84,19 +108,9 @@ export default function Home() {
         <Reviews/>
       </section> */}
 
-      {/* section 4 */}
-      <section className="no-bottom">
-        <Servers/>
-      </section>
+      
 
-      {/* section 5 */}
-      <Parallax className="" bgImage={image1} strength={300}>  
-        <div className="de-gradient-edge-top"></div>
-        <div className="de-gradient-edge-bottom"></div>
-        <section className="no-bg">
-          <Collection/>
-        </section>
-      </Parallax>
+      
 
       {/* section 6 */}
       <section className="no-top no-bottom">
@@ -114,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* footer */}
-      <Footer/>
+      {/* <Footer/> */}
 
 
     </div>

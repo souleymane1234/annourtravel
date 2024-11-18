@@ -74,7 +74,7 @@ const footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-6">
-                           Copyright 2023 - Playhost by Designesia
+                           Copyright 2023 - KODEGAMERZ by Designesia
                         </div>
                         <div className="col-lg-6 col-sm-6 text-lg-end text-sm-start">
                             <ul className="menu-simple">

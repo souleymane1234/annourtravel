@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Playhost - Game Hosting Website Template</title>
+      <title>KODEGAMERZ - L'univers des gamers africains</title>
       <link rel="icon" href="../img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 

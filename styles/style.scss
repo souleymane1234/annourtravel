@@ -1,7 +1,7 @@
 /* ======================*/
 
 
-/* Playhost
+/* KODEGAMERZ
 /* created by on3step
 
 @charset "utf-8";
@@ -1281,16 +1281,16 @@ a.btn-line {
     .menu>.navbar-item {
         counter-increment: my-awesome-counter;
     }
-    .menu>.navbar-item::before {
-        content: counter(my-awesome-counter) "";
-        position: absolute;
-        right: 22px;
-        top: 0px;
-        font-weight: bold;
-        font-size: 10px;
-        color: rgba(255, 255, 255, 0.5);
-        transition: all 0.3s ease;
-    }
+    // .menu>.navbar-item::before {
+    //     content: counter(my-awesome-counter) "";
+    //     position: absolute;
+    //     right: 22px;
+    //     top: 0px;
+    //     font-weight: bold;
+    //     font-size: 10px;
+    //     color: rgba(255, 255, 255, 0.5);
+    //     transition: all 0.3s ease;
+    // }
     .nav-icon {
         display: none;
     }
@@ -1618,6 +1618,13 @@ a.btn-line {
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
+    }
+    .sw-overlay {
+        position: absolute; /* Positionner l'overlay par rapport au parent */
+        width: 100%; /* Largeur de l'overlay */
+        height: 100%; /* Hauteur de l'overlay */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 90%); /* Dégradé léger sombre vers transparent */
+        pointer-events: none; /* Rendre l'overlay insensible aux clics */
     }
     .subtitle {
         position: relative;
@@ -3741,6 +3748,35 @@ p.lead {
     .swiper-container {
         slidesPerView: 2;
     }
+
+    section,
+    .section {
+        padding: 0;
+    }
+    h1.slider-title {
+        font-size: 20px;
+    }
+
+    .doubleslider {
+        .mainslider {
+            height: 70vh;
+        }
+        .thumb-slider{
+            height: 69.5vh;
+            margin: 5px;
+
+            .sw-caption-thumb {
+                h3 {
+                    font-size: 12px;
+                }
+                .d-tag {
+                    font-size: 8px;
+                    padding: 2px 5px;
+                }
+            }
+        }
+    }
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -3771,9 +3807,12 @@ p.lead {
         display: none !important;
     }
     .home-video {
-        height: 50vh !important;
+        height: 40vh !important;
         h1 {
             font-size: 30px;
         }
+    }
+    .col-xs-0 {
+        display: none;
     }
 }

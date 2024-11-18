@@ -18,12 +18,12 @@ const Section = () => {
                         <div className="container z-1000">
                             <div className="row align-items-center">                        
                                 <div className="col-lg-10 offset-lg-1 text-center">
-                                    <div className="subtitle blink mb-4 hide-mobile">Nous sommes</div>
-                                    <h1 className="mb-0 ">Kode Gamers</h1>                                    
+                                    <div className="subtitle blink mb-4 hide-mobile">Téléréalité</div>
+                                    <h1 className="mb-0 ">KodeGamerz</h1>                                    
                                 </div>
                                 <div className="col-lg-6 offset-lg-3 text-center text-white">
                                     <p className="">
-                                        Le jeu en un endroit
+                                        Nos émissions sont sur l'univers gaming
                                     </p>
                                     <Link className="btn-main " href="#">Voir nos services</Link>
 

@@ -16,11 +16,11 @@ const Section = () => {
                         
                         <div className="row z-1">
                             <div className="col-lg-6">
-                                <div className="subtitle mb-3">Start your game</div>
-                                <h2 className="wow fadeInUp" data-wow-delay=".2s">Unlock Your Gaming Full Potential</h2>
-                                <p className="wow fadeInUp">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore id do eiusmod. Lorem ipsum non labore.</p>
+                                <div className="subtitle mb-3">+20 Tournois</div>
+                                <h2 className="wow fadeInUp" data-wow-delay=".2s">Rejoins nous et participe à des tournois épiques</h2>
+                                <p className="wow fadeInUp">+25K de gamers dans notre métaverse.</p>
                                 <div className="spacer-10"></div>
-                                <Link className="btn-main mb10" href="#">Order Your Game Server Now</Link>
+                                <Link className="btn-main mb10" href="#">Réjoins nous maintenant</Link>
                             </div>
                         </div>
                         

@@ -8,7 +8,7 @@ const Sectionloc = () => {
         <>
         <div className="container">
             <div className="row">
-                <div className="col-lg-12">
+                {/* <div className="col-lg-12">
                     <div className="subtitle fadeInUp mb-3">Server locations</div>
                 </div>
                 <div className="col-lg-6">
@@ -18,9 +18,9 @@ const Sectionloc = () => {
                     Take advantage of our server location testing tool to ensure optimal performance. Since your users are spread across various locations, it&apos;s important to identify the server location that provides the best experience for your members. Our ping tester can help you determine the ideal server location for your specific needs.
                 </div>
 
-                <div className="spacer-10"></div>
+                <div className="spacer-10"></div> */}
 
-                <div className="col-lg-12 fadeInUp">
+                {/* <div className="col-lg-12 fadeInUp">
                     <div className="p-sm-30 pb-sm-0 mb-sm-0">
                         <div className="de-map-hotspot">
                             <div className="de-spot fadeIn" style={{top:'39%', left:'20%',}}>
@@ -71,64 +71,50 @@ const Sectionloc = () => {
                             <Image src={image1} className="img-fluid" alt=""/>
                         </div>
                     </div>
-                </div>                        
+                </div>                         */}
             </div>
         </div>
         <div className="no-bottom wow fadeInRight d-flex z-1000">
           <div className="de-marquee-list wow">
             <div className="d-item">
-              <span className="d-item-txt">London</span>
+              <span className="d-item-txt">Reseau social</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Paris</span>
+              <span className="d-item-txt">Pass Ultimate</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Frankurt</span>
+              <span className="d-item-txt">Tournois</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Amsterdam</span>
+              <span className="d-item-txt">Programme de fidelisation</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Stockholm</span>
+              <span className="d-item-txt">TÉLÉREALITÉ</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Helsinki</span>
+              <span className="d-item-txt">ABONNEMENT VAS</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Los Angeles</span>
+              <span className="d-item-txt">WEB TV</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Quebec</span>
+              <span className="d-item-txt">BOUTIQUE</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Singapore</span>
+
+              <span className="d-item-txt">SMART VOTING</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>
-              <span className="d-item-txt">Sydney</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">Sau Paulo</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">Bangkok</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">Jakarta</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
+              
              </div>
           </div>
         </div>
