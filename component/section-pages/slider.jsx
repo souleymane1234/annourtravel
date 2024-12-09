@@ -4,11 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import {isMobile} from 'react-device-detect';
 
-const image1 ="../../img/slider/5.webp";
+const image1 ="../../img/slider/KODEGAMERZ_BANNER4_VAS.jpg";
 const image2 ="../../img/slider/6.webp";
-const image3 ="../../img/slider/7.webp";
-const image4 ="../../img/slider/8.webp";
-const image5 ="../../img/slider/9.jpeg";
+const image3 ="../../img/slider/KODEGAMERZ_BANNER3_TOURNOIS.jpg";
+const image4 ="../../img/slider/KODEGAMERZ_BANNER2_LIVE_STEAMING.jpg";
+const image5 ="../../img/slider/BG_GIFTS_CARD.jpg";
 const image6 ="../../img/slider/10.jpeg";
 
 const YourComponent = () => {
@@ -87,7 +87,7 @@ const YourComponent = () => {
                       <div className="row gx-5 align-items-center text-center">
                           <div className="col-lg-8 mb-sm-30 mx-auto">
                               <div className="subtitle blink mb-4">Tournois en cours</div>
-                              <h1 className="slider-title text-uppercase mb-1">Hisse toi au sommet de l'arènne et gagne de nombreux lots</h1>
+                              <h1 className="slider-title text-uppercase mb-1">Hisse toi au sommet de l&apos;arènne et gagne de nombreux lots</h1>
                           </div>
                           <div className="col-lg-6 mx-auto">
                               {/* <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p> */}
@@ -134,7 +134,7 @@ const YourComponent = () => {
                   <div className="container">
                       <div className="row gx-5 align-items-center text-center">
                           <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">Smart Voting</div>
+                              <div className="subtitle blink mb-4">Votes gamers</div>
                               <h1 className="slider-title text-uppercase mb-1">Rejoins la communauté et vote pour tes gamers</h1>
                           </div>
                           <div className="col-lg-6 mx-auto">
@@ -231,7 +231,7 @@ const YourComponent = () => {
               <span className="d-tag">
                   +2K GAMERS
               </span>
-              <h3>Smart voting</h3>
+              <h3>Votes gamers</h3>
           </div>
         </SwiperSlide>
         <SwiperSlide className="swiper-slide" style={{

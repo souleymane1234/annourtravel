@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link'; 
 import Image from 'next/image';
 
-import image1 from '../../public/img/logo.png';
+import image1 from '../../public/img/logo-mobile.png';
 
 const footer = () => {
     return(
@@ -10,22 +10,22 @@ const footer = () => {
             <div className="container">
                 <div className="row gx-5">
                     <div className="col-lg-4">
-                        <Image src={image1} alt="" />
+                        <Image src={image1} alt="footer" className="img-fluid d-md-block imginit" height={45} />
                         <div className="spacer-20"></div>
-                        <p>Lorem ipsum culpa tempor tempor eu laboris adipisicing sunt excepteur enim laborum officia eiusmod laborum sint do aliqua incididunt est aute deserunt in elit non sed ut velit ullamco aliquip. Nulla cupidatat elit amet sed labore ut et consequat nostrud laboris aliqua ex est fugiat quis aliqua duis quis esse dolor laboris non duis sunt.</p>
+                        <p>KODEGAMERZ, c&apos;est ton pass pour l&apos;univers du gaming ! Accède facilement à des codes jeux, participe à des quiz, gagne des récompenses et profite d&apos;une expérience unique.</p>
                     </div>
                     <div className="col-lg-4">
                         <div className="row">
                             <div className="col-lg-6 col-sm-6">
                                 <div className="widget">
-                                    <h5>Game Server</h5>
+                                    <h5>Afiliation</h5>
                                     <ul>
-                                        <li><Link href="#">Thunder and City</Link></li>
-                                        <li><Link href="#">Mystic Racing Z</Link></li>
-                                        <li><Link href="#">Silent Wrath</Link></li>
-                                        <li><Link href="#">Funk Dungeon</Link></li>
-                                        <li><Link href="#">Galactic Oddsey</Link></li>
-                                        <li><Link href="#">Warfare Legend</Link></li>
+                                        <li><Link href="#">Netflix</Link></li>
+                                        <li><Link href="#">Amazon</Link></li>
+                                        <li><Link href="#">Playstation</Link></li>
+                                        <li><Link href="#">Apple</Link></li>
+                                        <li><Link href="#">Xbox</Link></li>
+                                        <li><Link href="#">Nintendo</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -33,12 +33,13 @@ const footer = () => {
                                 <div className="widget">
                                     <h5>Pages</h5>
                                     <ul>
-                                        <li><Link href="#">Game Server</Link></li>
-                                        <li><Link href="#">Knowledgebase</Link></li>
-                                        <li><Link href="#">About Us</Link></li>
-                                        <li><Link href="#">Affliates</Link></li>
-                                        <li><Link href="#">Locations</Link></li>
-                                        <li><Link href="#">News</Link></li>
+                                        <li><Link href="#">Univers VAS</Link></li>
+                                        <li><Link href="#">La Boutique</Link></li>
+                                        <li><Link href="#">Tournois</Link></li>
+                                        <li><Link href="#">Web TV</Link></li>
+                                        <li><Link href="#">Télé-réalité</Link></li>
+                                        
+                                        <li><Link href="#">Votes</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -54,10 +55,10 @@ const footer = () => {
                             </div>
                             </form>
                             <div className="spacer-10"></div>
-                            <small>Your email is safe with us. We don&apos;t spam.</small>
+                            <small>Votre e-mail est en sécurité chez nous. Nous ne faisons pas de spam.</small>
                             <div className="spacer-30"></div>
                             <div className="widget">
-                                <h5>Follow Us on</h5>
+                                <h5>Suivez-nous sur</h5>
                                 <div className="social-icons">
                                     <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
                                     <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
@@ -74,12 +75,12 @@ const footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-6">
-                           Copyright 2023 - KODEGAMERZ by Designesia
+                           Copyright 2023 - KODEGAMERZ
                         </div>
                         <div className="col-lg-6 col-sm-6 text-lg-end text-sm-start">
                             <ul className="menu-simple">
-                                <li><Link href="#">Terms &amp; Conditions</Link></li>
-                                <li><Link href="#">Privacy Policy</Link></li>
+                                <li><Link href="#">Conditions générales</Link></li>
+                                <li><Link href="#">Politique de confidentialité</Link></li>
                             </ul>
                         </div>
                     </div>

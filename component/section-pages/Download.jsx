@@ -19,7 +19,7 @@ const Download = () => {
                             <Link href="#"><Image width="180" height="100" src="../../img/misc/download-playstore.webp" className="img-fluid mb-sm-20" alt="download"/></Link>
                         </div>
                     </Parallax>
-                    <Image width="700" height="550" src="../../img/misc/man-with-phone.webp" className="max-content sm-hide position-absolute bottom-0 end-0"  alt=""/>
+                    <Image width="700" height="550" src="../../img/misc/MAN_KODEGAMERZ1.png" className="max-content sm-hide position-absolute bottom-0 end-0"  alt=""/>
                 </div>
             </div>
         </div>

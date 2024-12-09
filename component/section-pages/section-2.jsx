@@ -3,7 +3,7 @@ import { Parallax } from "react-parallax";
 import Image from 'next/image';
 import Link from 'next/link';
 
-const image1 ='../../img/background/1.webp';
+const image1 ="../../img/slider/KODEGAMERZ_BANNER3_TOURNOIS.jpg";
 import image2 from'../../public/img/misc/avatar.webp';
 
 const Section = () => {

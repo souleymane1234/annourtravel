@@ -110,7 +110,7 @@ const Sectionloc = () => {
                 <i className="d-item-block"></i>
               </span>
 
-              <span className="d-item-txt">SMART VOTING</span>
+              <span className="d-item-txt">VOTES</span>
               <span className="d-item-display">
                 <i className="d-item-block"></i>
               </span>

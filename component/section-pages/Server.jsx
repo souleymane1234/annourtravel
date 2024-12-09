@@ -14,7 +14,7 @@ const server = () => {
 
                 <div className="col-lg-6">
                     <div className="subtitle  mb-3">Univers VAS</div>
-                    <h2 className=""><span className="text-gradient">#707*1#</span> et rentre dans la liste des gagnants chaque semaine</h2>
+                    <h2 className=""><span className="text-gradient">#*****#</span> et rentre dans la liste des gagnants chaque semaine</h2>
                     <p className="">De nombreux lots sont disponibles</p>
 
                     <ul className="de-server">

@@ -47,8 +47,15 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>KodeGamerz - Le reseau social des gamers africain</title>
-      <link rel="icon" href="./img/icon.png" type="image/gif" sizes="16x16"/>
+        <title>KodeGamerz - Le reseau social des gamers africain</title>
+        <meta name="title" content="KodeGamerz - Le reseau social des gamers africain"/>
+        <meta name="description" content="KODEGAMERZ est une plateforme web / mobile / SMS d’achat de codes de jeux numériques et rechargement streaming,"/>
+        <meta name="keywords" content="KODEGAMERZ, codes de jeux, rechargement streaming, VAS, CI, Gaming"/>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="language" content="English"/>
+        <meta name="author" content="SMARTDEV"/>
+        <link rel="icon" href="./img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 
     <GlobalStyles/>
@@ -128,7 +135,7 @@ export default function Home() {
       </section>
 
       {/* footer */}
-      {/* <Footer/> */}
+      <Footer/>
 
 
     </div>

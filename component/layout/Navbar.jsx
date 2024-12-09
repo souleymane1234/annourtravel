@@ -3,7 +3,7 @@ import Link from 'next/link';
 import useOnclickOutside from "react-cool-onclickoutside";
 import Image from 'next/image';
 
-import logoImg from '../../public/img/logo-mobile.png';
+import logoImg from '../../public/img/logo.png';
 import logoImgmbl from '../../public/img/logo-mobile.png';
 
 
@@ -152,7 +152,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                 </div>
                 <div className='navbar-item counter'>
                       <Link href="/location" onClick={() => setBtnIcon(!showmenu)}>
-                      SMART VOTING
+                      VOTES
                       </Link>
                     </div>
 
@@ -235,7 +235,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
 
               <div className='navbar-item counter'>
                 <Link href="/location">
-                SMART VOTING
+                VOTES
                 </Link>
               </div>
 
