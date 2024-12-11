@@ -13,7 +13,6 @@ const image6 ="../../img/slider/10.jpeg";
 
 const YourComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
-  console.log(isMobile, 'isMobile')
   return (
     <div className="doubleslider">
     <Swiper
