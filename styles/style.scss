@@ -3758,12 +3758,19 @@ p.lead {
     }
 
     .doubleslider {
+        flex-direction: column;
         .mainslider {
-            height: 70vh;
+            width: 100%;
+            height: 50vh;
         }
         .thumb-slider{
-            height: 69.5vh;
-            margin: 5px;
+            height: 17vh;
+            margin: 5px 0px;
+            width: 100%;
+
+            .swiper-wrapper {
+                flex-direction: row;
+            }
 
             .sw-caption-thumb {
                 h3 {

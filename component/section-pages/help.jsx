@@ -5,7 +5,7 @@ const help = () => {
         <div className="container">
             <div className="row">
                 <div className="col-lg-6">                            
-                    <div className="subtitle  mb-3">Avez-vous </div>
+                    <div className="subtitle  mb-3 mt-3">Avez-vous </div>
                     <h2 className=" mb20">Une question ?</h2>
                 </div>
 
