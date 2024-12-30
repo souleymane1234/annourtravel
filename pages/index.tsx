@@ -49,14 +49,14 @@ export default function Home() {
     <>
     <Head>
         <title>KodeGamerz - Le reseau social des gamers africain</title>
-        <meta name="title" content="KodeGamerz - Le reseau social des gamers africain"/>
-        <meta name="description" content="KODEGAMERZ est une plateforme web / mobile / SMS d’achat de codes de jeux numériques et rechargement streaming,"/>
-        <meta name="keywords" content="KODEGAMERZ, codes de jeux, rechargement streaming, VAS, CI, Gaming"/>
+        <meta name="title" content="Annour Travel - La meilleure agence de voyage"/>
+        <meta name="description" content="Annour Travel est une agence de voyage,"/>
+        <meta name="keywords" content="Annour Travel, agence voyage, tourisme, etude, CI, Canada, France, Chine, Turquie, hadj, oumra, Arabie Saoudite"/>
         <meta name="robots" content="index, follow"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="language" content="English"/>
-        <meta name="author" content="SMARTDEV"/>
-        <link rel="icon" href="./img/icon.png" type="image/gif" sizes="16x16"/>
+        <meta name="author" content="DevSocial"/>
+        <link rel="icon" href="./img/logo-removebg-preview.png" type="image/gif" sizes="16x16"/>
     </Head>
 
     <GlobalStyles/>
