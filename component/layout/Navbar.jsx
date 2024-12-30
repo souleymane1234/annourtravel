@@ -69,10 +69,10 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
         <div className="container">
 
           {/********* Logo *********/}
-          <Link  className="navbar-brand" href="/">
+          {/* <Link  className="navbar-brand" href="/">
             <Image src={logoImg} className="img-fluid d-md-block d-none imginit" alt="logo" height={45}/>
             <Image src={logoImgmbl} className="img-fluid d-md-none d-sms-none imginit" alt="logo" height={45}/>
-          </Link>
+          </Link> */}
           {/********* Logo *********/}
 
               {/********* Mobile Menu *********/}
@@ -81,12 +81,17 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
               <div className='menu'>
                 
                 <div className='navbar-item counter'>
-                      <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
+                      <Link href="#accueil" onClick={() => setBtnIcon(!showmenu)}>
                       ACCUEIL
                       </Link>
                     </div>
+                    <div className='navbar-item counter'>
+                      <Link href="#service" onClick={() => setBtnIcon(!showmenu)}>
+                      NOS SERVICES
+                      </Link>
+                    </div>
 
-                  <div className='navbar-item counter'>
+                  {/* <div className='navbar-item counter'>
                     <div ref={ref}>
                       <div className="dropdown-custom dropdown-toggle btn" 
                         onClick={() => {
@@ -96,7 +101,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                                         closeMenu3();
                                         closeMenu4();
                                       }}>
-                        LA BOUTIQUE
+                        SERVICES
                       </div>
                       {openMenu && (
                         <div className='item-dropdown'>
@@ -108,15 +113,15 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                         </div>
                       )}
                     </div>
-                </div>
+                </div> */}
                 
                 <div className='navbar-item counter'>
-                      <Link href="/" onClick={() => setBtnIcon(!showmenu)}>
-                      TOURNOIS
+                      <Link href="#contact" onClick={() => setBtnIcon(!showmenu)}>
+                      CONTACTS
                       </Link>
                     </div>
 
-                  <div className='navbar-item counter'>
+                  {/* <div className='navbar-item counter'>
                     <div ref={ref1}>
                       <div className="dropdown-custom dropdown-toggle btn" 
                         onClick={() => {
@@ -137,9 +142,9 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                         </div>
                       )}
                     </div>
-                  </div>
+                  </div> */}
 
-                   <div className='navbar-item counter'>
+                   {/* <div className='navbar-item counter'>
                       <Link href="/location" onClick={() => setBtnIcon(!showmenu)}>
                       TÉLÉREALITÉ
                       </Link>
@@ -154,7 +159,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                       <Link href="/location" onClick={() => setBtnIcon(!showmenu)}>
                       VOTES
                       </Link>
-                    </div>
+                    </div> */}
 
                     
 
@@ -168,12 +173,17 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
             <div className='menu'>
               
               <div className='navbar-item counter'>
-                <Link href="/">
+                <Link href="#accueil">
                 ACCUEIL
                 </Link>
               </div>
-
               <div className='navbar-item counter'>
+                <Link href="#services">
+                NOS SERVICES
+                </Link>
+              </div>
+
+              {/* <div className='navbar-item counter'>
                 <div ref={ref1}>
                   <div className="dropdown-custom dropdown-toggle btn" 
                      onMouseEnter={handleBtnClick1} onMouseLeave={closeMenu1}>
@@ -189,15 +199,15 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                   </div>
                   
                 </div>
-            </div>
+            </div> */}
 
               <div className='navbar-item counter'>
-                <Link href="/location">
-                TOURNOIS
+                <Link href="#contact">
+                CONTACTS
                 </Link>
               </div>
 
-              <div className='navbar-item counter'>
+              {/* <div className='navbar-item counter'>
                 <div ref={ref2}>
                   <div className="dropdown-custom dropdown-toggle btn" 
                      onMouseEnter={handleBtnClick2} onMouseLeave={closeMenu2}>
@@ -213,7 +223,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                   </div>
                   
                 </div>
-            </div>
+            </div> */}
 
               {/* <div className='navbar-item counter'>
                 <Link href="/location">
@@ -221,7 +231,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                 </Link>
               </div> */}
 
-              <div className='navbar-item counter'>
+              {/* <div className='navbar-item counter'>
                 <Link href="/location">
                 TÉLÉREALITÉ
                 </Link>
@@ -237,7 +247,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                 <Link href="/location">
                 VOTES
                 </Link>
-              </div>
+              </div> */}
 
             {/* <div className='navbar-item counter'>
                 <div ref={ref1}>
@@ -331,9 +341,8 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
           {/********* Dekstop Menu *********/}
 
           {/********* Side Button *********/}
-          <div className="menu_side_area">
+          {/* <div className="menu_side_area">
               <Link href="/login" className="btn-line" id="btn-line">Mon compte</Link>
-              {/********* Burger Button *********/}
               <button className="burgermenu" type="button" 
                 onClick={() => {
                   setBtnIcon(!showmenu);
@@ -344,8 +353,7 @@ const { isOpen: openMenu4, toggleDropdown: handleBtnClick4, closeDropdown: close
                 }}>
                 <i className="fa fa-bars" aria-hidden="true"></i>
               </button>
-              {/********* Burger Button *********/}
-          </div>
+          </div> */}
           {/********* Side Button *********/}
 
           

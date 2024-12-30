@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 
 const Section = () => {
-   const videoId = 'QB2DfxkaBeU';
+   const videoId = 'PtD09yuh4gU';
     return(
         <Parallax className="home-video">
                 <div className="iframeyoutube"><YouTubePlayer videoId={videoId} /></div>
@@ -18,14 +18,14 @@ const Section = () => {
                         <div className="container z-1000">
                             <div className="row align-items-center">                        
                                 <div className="col-lg-10 offset-lg-1 text-center">
-                                    <div className="subtitle blink mb-4 hide-mobile">Téléréalité</div>
-                                    <h1 className="mb-0 ">KodeGamerz</h1>                                    
+                                    {/* <div className="subtitle blink mb-4 hide-mobile">Téléréalité</div> */}
+                                    <h1 className="mb-0 ">Annour Travel</h1>                                    
                                 </div>
                                 <div className="col-lg-6 offset-lg-3 text-center text-white">
                                     <p className="">
-                                        Nos émissions sont sur l'univers gaming
+                                        Voyager avec nous dans tout le monde entier
                                     </p>
-                                    <Link className="btn-main " href="#">Voir nos services</Link>
+                                    <Link className="btn-main " href="#services">Voir nos services</Link>
 
                                     <div className="spacer-single"></div>
 
@@ -37,8 +37,8 @@ const Section = () => {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star"></i>
                                         </span>
-                                        <span className="d-val">4.85</span>
-                                        basé sur <strong>14086</strong> votes.
+                                        {/* <span className="d-val">5</span> */}
+                                        {/* basé sur <strong>14086</strong> votes. */}
                                     </div>
                                 </div>
                             </div>

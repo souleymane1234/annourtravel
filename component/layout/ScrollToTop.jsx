@@ -57,7 +57,7 @@ export default class ScrollToTop extends Component {
       <div id='scroll-to-top' className='init'>
         {is_visible && (
           <div className='float-text' onClick={this.scrollToTop}>
-            <span>
+            <span className='text-gradient' style={{fontWeight: "bold", marginBottom: 10}}>
               <Link href='#'>Remonter la page</Link>
             </span>
             <div className='scrollbar-v' style={{ height: scrollbarHeight }} />

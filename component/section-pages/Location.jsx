@@ -1,7 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
 
-import image1 from"../../public/img/misc/world-map.webp";
+import image1 from"../../public/img/partenaires/airivoire.jpg";
+import image2 from'../../public/img/partenaires/airfrance.jpg';
+import image3 from"../../public/img/partenaires/emirates.jpg";
+import image4 from'../../public/img/partenaires/ram.jpg';
+import image5 from"../../public/img/partenaires/sky.jpg";
+import image6 from'../../public/img/partenaires/corsair.jpg';
+import image7 from"../../public/img/partenaires/egypteair.jpg";
+import image8 from'../../public/img/partenaires/as.jpg';
+import image9 from"../../public/img/partenaires/kenya.jpg";
+import image10 from'../../public/img/partenaires/senegal.jpg';
+import image11 from"../../public/img/partenaires/brussels.jpg";
+import image12 from'../../public/img/partenaires/airburkina.jpg';
+import image13 from"../../public/img/partenaires/qatar.jpg";
+import image14 from'../../public/img/partenaires/tunisair.jpg';
+import image15 from"../../public/img/partenaires/algerie.jpg";
+import image16 from'../../public/img/partenaires/mauritanie.jpg';
 
 const Sectionloc = () => {
     return(
@@ -77,42 +92,26 @@ const Sectionloc = () => {
         <div className="no-bottom wow fadeInRight d-flex z-1000">
           <div className="de-marquee-list wow">
             <div className="d-item">
-              <span className="d-item-txt">Reseau social</span>
+              {/* <span className="d-item-txt">TÉLÉREALITÉ</span> */}
               <span className="d-item-display">
-                <i className="d-item-block"></i>
+                <Image src={image1} className="sm-hide avatar px-2"   alt=""/>
               </span>
-              <span className="d-item-txt">Pass Ultimate</span>
+              {/* <span className="d-item-txt">ABONNEMENT VAS</span> */}
               <span className="d-item-display">
-                <i className="d-item-block"></i>
+                <Image src={image2} className="sm-hide avatar px-2" style={{width: 200, height: 200}}  alt=""/>
               </span>
-              <span className="d-item-txt">Tournois</span>
+              {/* <span className="d-item-txt">WEB TV</span> */}
               <span className="d-item-display">
-                <i className="d-item-block"></i>
+                <Image src={image3} className="sm-hide avatar px-2" style={{width: 200, height: 200}}  alt=""/>
               </span>
-              <span className="d-item-txt">Programme de fidelisation</span>
+              {/* <span className="d-item-txt">BOUTIQUE</span> */}
               <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">TÉLÉREALITÉ</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">ABONNEMENT VAS</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">WEB TV</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
-              </span>
-              <span className="d-item-txt">BOUTIQUE</span>
-              <span className="d-item-display">
-                <i className="d-item-block"></i>
+                <Image src={image4} className="sm-hide avatar px-2" style={{width: 200, height: 200}}  alt=""/>
               </span>
 
-              <span className="d-item-txt">VOTES</span>
+              {/* <span className="d-item-txt">VOT</span> */}
               <span className="d-item-display">
-                <i className="d-item-block"></i>
+                <Image src={image5} className="sm-hide avatar px-2" style={{width: 200, height: 200}}  alt=""/>
               </span>
               
              </div>

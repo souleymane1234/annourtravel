@@ -21,6 +21,7 @@ import { createGlobalStyle } from 'styled-components';
 import HomestaticVideo from '../component/section-pages/homestatic-video';
 import Sectioncol from '../component/section-pages/section-3col';
 import Location from '../component/section-pages/Location';
+import Test from '../component/section-pages/Test';
 const image1 ="./img/background/3.webp";
 const image2 ="./img/background/2.webp";
 
@@ -66,13 +67,13 @@ export default function Home() {
     </div>
 
     {/* MENU */}
-    <div className="home dark-scheme">
+    <div className="home" style={{backgroundColor: "#fff"}}>
       <header id="header-wrap">
          <Navbar />
         </header>
         
         {/* slider */}
-      <section className="no-padding">
+      <section id='accueil' className="no-padding">
         <SwiperComponent />
         </section>
         {/* section 4 */}
@@ -84,7 +85,7 @@ export default function Home() {
       <Parallax className="" bgImage={image1} strength={300}>  
         <div className="de-gradient-edge-top"></div>
         <div className="de-gradient-edge-bottom"></div>
-        <section className="no-bg">
+        <section id='services' className="no-bg">
           <Collection/>
         </section>
         </Parallax>
@@ -101,12 +102,12 @@ export default function Home() {
         
         
 
-       <section className="no-bottom">
-        <Location/>
+       <section className="no-bottom container">
+        <Test/>
       </section>
 
       {/* section 2 */}
-      <section className="no-bottom">
+      <section id='contact' className="no-bottom">
         <Section2/>
       </section>
 
@@ -119,20 +120,20 @@ export default function Home() {
 
       
 
-      {/* section 6 */}
+      {/* section 6
       <section className="no-top no-bottom">
         <Help/>
       </section>
 
-      {/* section 7 */}
+      section 7
       <section className="no-bottom">
         <Download/>
       </section>
 
-      {/* section 8 */}
+      section 8
       <section className="">
         <Payment/>
-      </section>
+      </section> */}
 
       {/* footer */}
       <Footer/>

@@ -2,20 +2,20 @@ import React from 'react';
 import Link from 'next/link'; 
 import Image from 'next/image';
 
-import image1 from '../../public/img/logo-mobile.png';
+import image1 from '../../public/img/slider/logo-removebg-preview.png';
 
 const footer = () => {
     return(
-        <footer>
+        <footer style={{backgroundColor: "#1f2024"}}>
             <div className="container">
                 <div className="row gx-5">
                     <div className="col-lg-4">
                         <Image src={image1} alt="footer" className="img-fluid d-md-block imginit" height={45} />
                         <div className="spacer-20"></div>
-                        <p>KODEGAMERZ, c&apos;est ton pass pour l&apos;univers du gaming ! Accède facilement à des codes jeux, participe à des quiz, gagne des récompenses et profite d&apos;une expérience unique.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium voluptatum maxime, provident voluptatem atque mollitia commodi, voluptate eveniet aut ea eaque incidunt natus sit obcaecati itaque rerum nesciunt tempore!</p>
                     </div>
                     <div className="col-lg-4">
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-lg-6 col-sm-6">
                                 <div className="widget">
                                     <h5>Afiliation</h5>
@@ -43,7 +43,7 @@ const footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col-lg-4">
                         <div className="widget">
@@ -75,7 +75,7 @@ const footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-6">
-                           Copyright 2023 - KODEGAMERZ
+                           Copyright 2024 - ANNOUR TRAVEL
                         </div>
                         <div className="col-lg-6 col-sm-6 text-lg-end text-sm-start">
                             <ul className="menu-simple">
