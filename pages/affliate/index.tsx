@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>KODEGAMERZ - L&apos;univers des gamers africains</title>
+      <title>ANNOUR TRAVEL</title>
       <link rel="icon" href="../img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 

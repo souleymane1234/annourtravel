@@ -8,7 +8,7 @@ import image6 from'../../public/img/partenaires/corsair.jpg';
 import image7 from"../../public/img/partenaires/egypteair.jpg";
 import image8 from'../../public/img/partenaires/as.jpg';
 import image9 from"../../public/img/partenaires/kenya.jpg";
-import image10 from'../../public/img/partenaires/senegal.jpg';
+import image10 from'../../public/img/partenaires/senegal-removebg-preview.png';
 import image11 from"../../public/img/partenaires/brussels.jpg";
 import image12 from'../../public/img/partenaires/airburkina.jpg';
 import image13 from"../../public/img/partenaires/qatar.jpg";
@@ -26,7 +26,7 @@ const logos = [
   { src: image7, alt: 'Logo 7' },
   { src: image8, alt: 'Logo 8' },
   { src: image9, alt: 'Logo 9' },
-  { src: image10, alt: 'Logo 10' },
+  // { src: image10, alt: 'Logo 10' },
   { src: image11, alt: 'Logo 11' },
   { src: image12, alt: 'Logo 12' },
   { src: image13, alt: 'Logo 13' },

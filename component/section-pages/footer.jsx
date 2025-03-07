@@ -50,7 +50,7 @@ const footer = () => {
                             <h5>Newsletter</h5>
                             <form action="blank.php" className="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
                             <div className="col text-center">
-                                <input className="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> <Link href="#" id="btn-subscribe"><i className="arrow_right bg-color-secondary"></i></Link>
+                                <input className="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="Entrer votre email" type="text" /> <Link href="#" id="btn-subscribe"><i className="arrow_right bg-color-secondary"></i></Link>
                                 <div className="clearfix"></div>
                             </div>
                             </form>

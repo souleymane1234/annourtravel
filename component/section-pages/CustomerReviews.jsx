@@ -46,7 +46,7 @@ const Customerreviews = () => {
                           <i className="fa fa-star"></i>
                       </span>
                   </div>
-                  <p>&quot;I&apos;ve been using KODEGAMERZ for my game server needs, and I couldn&apos;t be happier. The server uptime is fantastic, and the customer support team is always quick to assist with any issues.&quot;
+                  <p>&quot;I&apos;ve been using Annour Travel for my game server needs, and I couldn&apos;t be happier. The server uptime is fantastic, and the customer support team is always quick to assist with any issues.&quot;
                   </p>
                   <div className="de_testi_by">
                       <Image alt="" src={image1}/> <span>Michael S.</span>
@@ -68,7 +68,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;Running a game server used to be a hassle, but KODEGAMERZ makes it easy. The control panel is user-friendly, and I love how they handle server maintenance and updates.&quot;</p>
+                    <p>&quot;Running a game server used to be a hassle, but Annour Travel makes it easy. The control panel is user-friendly, and I love how they handle server maintenance and updates.&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image2}/> <span>Robert L.</span>
                     </div>
@@ -89,7 +89,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;I&apos;ve tried several hosting providers in the past, and KODEGAMERZ is by far the best. Their server performance is top-notch, and I&apos;ve never experienced lag while playing with friends.&quot;</p>
+                    <p>&quot;I&apos;ve tried several hosting providers in the past, and Annour Travel is by far the best. Their server performance is top-notch, and I&apos;ve never experienced lag while playing with friends.&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image3}/> <span>Jake M.</span>
                     </div>
@@ -110,7 +110,7 @@ const Customerreviews = () => {
                               <i className="fa fa-star"></i>
                           </span>
                       </div>
-                      <p>As a new server owner, I was worried about setup and configuration, but KODEGAMERZ made it a breeze. They have detailed tutorials and helpful support, which made the process smooth.&quot;</p>
+                      <p>As a new server owner, I was worried about setup and configuration, but Annour Travel made it a breeze. They have detailed tutorials and helpful support, which made the process smooth.&quot;</p>
                       <div className="de_testi_by">
                           <Image alt="" src={image4}/> <span>Alex P.</span>
                       </div>
@@ -131,7 +131,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;The flexibility KODEGAMERZ offers is incredible. I can easily switch between game servers or even host multiple games on the same plan. It&apos;s a gamer&apos;s dream come true!&quot;</p>
+                    <p>&quot;The flexibility Annour Travel offers is incredible. I can easily switch between game servers or even host multiple games on the same plan. It&apos;s a gamer&apos;s dream come true!&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image5}/> <span>Carlos R.</span>
                     </div>
@@ -152,7 +152,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;I&apos;ve been a loyal customer of KODEGAMERZ for years now. Their dedication to keeping their hardware up-to-date ensures my gaming experience is always optimal.&quot;</p>
+                    <p>&quot;I&apos;ve been a loyal customer of Annour Travel for years now. Their dedication to keeping their hardware up-to-date ensures my gaming experience is always optimal.&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image6}/> <span>Edward B.</span>
                     </div>
@@ -173,7 +173,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;When our community needed a reliable server for our esports tournaments, we turned to KODEGAMERZ, and they&apos;ve never let us down. Their servers are perfect for competitive gaming.&quot;</p>
+                    <p>&quot;When our community needed a reliable server for our esports tournaments, we turned to Annour Travel, and they&apos;ve never let us down. Their servers are perfect for competitive gaming.&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image7}/> <span>Daniel H.</span>
                     </div>
@@ -194,7 +194,7 @@ const Customerreviews = () => {
                             <i className="fa fa-star"></i>
                         </span>
                     </div>
-                    <p>&quot;The DDoS protection from KODEGAMERZ is a lifesaver. We used to get attacked regularly, but since switching to their servers, we haven&apos;t had any downtime.&quot;</p>
+                    <p>&quot;The DDoS protection from Annour Travel is a lifesaver. We used to get attacked regularly, but since switching to their servers, we haven&apos;t had any downtime.&quot;</p>
                     <div className="de_testi_by">
                         <Image alt="" src={image8}/> <span>Bryan G.</span>
                     </div>

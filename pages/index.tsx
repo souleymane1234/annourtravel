@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
     <Head>
-        <title>KodeGamerz - Le reseau social des gamers africain</title>
+        <title>Annour Travel </title>
         <meta name="title" content="Annour Travel - La meilleure agence de voyage"/>
         <meta name="description" content="Annour Travel est une agence de voyage,"/>
         <meta name="keywords" content="Annour Travel, agence voyage, tourisme, etude, CI, Canada, France, Chine, Turquie, hadj, oumra, Arabie Saoudite"/>

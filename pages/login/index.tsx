@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>KODEGAMERZ - L&apos;univers des gamers africains</title>
+      <title>ANNOUR TRAVEL</title>
       <link rel="icon" href="../img/icon.png" type="image/gif" sizes="16x16"/>
     </Head>
 
@@ -64,7 +64,7 @@ export default function Home() {
                 <div className="col-lg-4 offset-lg-4">
                     <div className="padding40 rounded-10 shadow-soft bg-dark-1" id="login">
                         <div className="text-center">
-                            <h4>Bienvenue dans l&apos;univers KODEGAMERZ</h4>
+                            <h4>Bienvenue dans l&apos;univers Annour Travel</h4>
                         </div>
                         <div className="spacer-10"></div>
                         <form id="form_register" className="form-border">
