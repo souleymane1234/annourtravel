@@ -1,79 +1,161 @@
-"use client"
-import React from 'react';
-import { useState } from 'react';
-import { Parallax } from "react-parallax";
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const image1 ="../../img/slider/Annour Travel_BANNER3_TOURNOIS.jpg";
-import image2 from'../../public/img/misc/avatar.webp';
+import Swal from 'sweetalert2';
 
 const Section = () => {
-    const [selectedOption, setSelectedOption] = useState('');
+  // Définition de l'état pour stocker les données du formulaire
+  const [formData, setFormData] = useState({
+    nom: "",
+    numero: "",
+    email: "",
+    service: "",
+    commentaire: "",
+  });
 
-    const handleChange = (event) => {
-        setSelectedOption(event.target.value);
-      };
-    return(
-        <div style={{backgroundColor: "#1f2024"}}>
-            <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <form>
-            <div className="row mb-3">
-              <div className="col-md-6">
-                <label htmlFor="input1" className="form-label">Votre nom</label>
-                <input type='text' name='name' id='name' className="form-control" placeholder='mon nom'/>
+  // Fonction pour mettre à jour l'état lorsqu'un champ est modifié
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value, // Met à jour dynamiquement la clé correspondante
+    }));
+  };
+
+  // Fonction pour envoyer les données au serveur
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    try {
+      const response = await fetch("http://localhost:3000/client", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi du formulaire");
+      }
+      Swal.fire({
+        title: "Formulaire envoyé !",
+        text: "Votre demande a été envoyée avec succès. Vous serez contacté par notre équipe commerciale.",
+        icon: "success",
+        confirmButtonText: "OK",
+        timer: 5000, // L'alerte disparaît après 3 secondes
+      });
+      setFormData({ nom: "", numero: "", email: "", service: "", commentaire: "" }); // Réinitialiser le formulaire après envoi
+    } catch (error) {
+      console.error("Erreur:", error);
+      alert("Une erreur est survenue");
+    }
+  };
+
+  return (
+    <div style={{ backgroundColor: "#1f2024" }}>
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <form onSubmit={handleSubmit}>
+              {/* Champs Nom et Numéro */}
+              <div className="row mb-3">
+                <div className="col-md-6">
+                  <label htmlFor="nom" className="form-label">Votre nom</label>
+                  <input
+                    type="text"
+                    name="nom"
+                    id="nom"
+                    className="form-control"
+                    placeholder="Mon nom"
+                    value={formData.nom}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="numero" className="form-label">Votre numéro</label>
+                  <input
+                    type="tel"
+                    name="numero"
+                    id="numero"
+                    className="form-control"
+                    placeholder="+2250102030405"
+                    value={formData.numero}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
               </div>
-              <div className="col-md-6">
-                <label htmlFor="input2" className="form-label">Votre numero</label>
-                <input type='tel' name='numberTel' id='numberTel' className="form-control" placeholder='+2250102030405'/>
-              </div>
-            </div>
-            <div className="row mb-3">
-              <div className="col-md-6">
-                <label htmlFor="input3" className="form-label">Votre email</label>
-                <input type='email' name='email' id='email' className="form-control" placeholder='nom@email.com'/>
-              </div>
-              <div className="col-md-6">
-                <label htmlFor="select" className="form-label">Choisissez votre service</label>
-                <select className="form-select" id="select">
-                  <option value="" disabled>
-                    -- Sélectionnez --
-                    </option>
+
+              {/* Champ Email et Sélection du service */}
+              <div className="row mb-3">
+                <div className="col-md-6">
+                  <label htmlFor="email" className="form-label">Votre email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="form-control"
+                    placeholder="nom@email.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="service" className="form-label">Choisissez votre service</label>
+                  <select
+                    className="form-select"
+                    name="service"
+                    id="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>-- Sélectionnez --</option>
                     <option value="VisaCanada">Visa Canada</option>
                     <option value="VisaArabieSaoudite">Visa Arabie Saoudite</option>
                     <option value="VisaDubai">Visa Dubai</option>
                     <option value="VisaChine">Visa Chine</option>
                     <option value="VisaMaroc">Visa Maroc</option>
                     <option value="VisaTurquie">Visa Turquie</option>
-                    <option value="VisaSchengen">Visa Schengen ( France, Espagne )</option>
-                    <option value="illet d’avions">Billet d’avions</option>
-                    <option value="Réservation d’hotel">Réservation d’hotel</option>
-                    <option value="CircuitDubaï">Package circuit Touristique Dubaï</option>
-                    <option value="OUMRA">Package OUMRA Arabie saoudite</option>
-                    <option value="Attestationréservationbilletd’avion">Attestation de réservation de billet d’avion</option>
-                    <option value="Attestationderéservationd'hôtel">Attestation de réservation d'hôtel</option>
-                    <option value="Assurancevoyage">Assurance voyage</option>
-                    <option value="Cargoenvoiecolis">Cargo et envoie de colis</option>
-                    <option value="Transfertd’argent">Transfert d’argent</option>
-                </select>
+                    <option value="VisaSchengen">Visa Schengen (France, Espagne)</option>
+                    <option value="BilletAvion">Billet d’avion</option>
+                    <option value="ReservationHotel">Réservation d’hôtel</option>
+                    <option value="CircuitDubai">Package circuit Touristique Dubaï</option>
+                    <option value="OUMRA">Package OUMRA Arabie Saoudite</option>
+                    <option value="AttestationReservationBillet">Attestation de réservation de billet d’avion</option>
+                    <option value="AttestationReservationHotel">Attestation de réservation d'hôtel</option>
+                    <option value="AssuranceVoyage">Assurance voyage</option>
+                    <option value="CargoEnvoiColis">Cargo et envoi de colis</option>
+                    <option value="TransfertArgent">Transfert d’argent</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="textarea" className="form-label">Commentaire</label>
-              <textarea className="form-control" id="textarea" rows="3"></textarea>
-            </div>
-            <div className="text-center">
-              <button type="submit" className="btn btn-primary">Envoyer</button>
-            </div>
-          </form>
+
+              {/* Champ Commentaire */}
+              <div className="mb-3">
+                <label htmlFor="commentaire" className="form-label">Commentaire</label>
+                <textarea
+                  className="form-control"
+                  name="commentaire"
+                  id="commentaire"
+                  rows="3"
+                  value={formData.commentaire}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
+
+              {/* Bouton Envoyer */}
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">Envoyer</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-        </div>
-    );
-}
+  );
+};
 
 export default Section;
