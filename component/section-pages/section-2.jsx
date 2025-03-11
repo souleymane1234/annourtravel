@@ -103,7 +103,7 @@ const Section = () => {
       {/* Champ Email et Sélection du service */}
       <div className="row mb-3">
         <div className="col-md-6">
-          <label htmlFor="email" className="form-label">Votre email</label>
+          <label htmlFor="email" className="form-label">Votre mail</label>
           <input
             type="email"
             name="email"
