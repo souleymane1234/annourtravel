@@ -27,7 +27,7 @@ const Section = () => {
     event.preventDefault(); // Empêche le rechargement de la page
 
     try {
-      const response = await fetch("http://localhost:3000/client", {
+      const response = await fetch("https://api.annour-travel.com/client", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
