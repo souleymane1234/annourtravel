@@ -11,8 +11,8 @@ const Section = () => {
         <Parallax className="home-video">
                 {/* <div className="iframeyoutube"><YouTubePlayer videoId={videoId} /></div> */}
                 <div className="iframeyoutube">
-      <video width="100%" height="auto" controls autoPlay loop>
-        <source src="/video/local-video-1.mp4" type="video/mp4" />
+      <video width="100%" height="auto" controls autoPlay loop muted>
+        <source src="/video/video.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
     </div>
