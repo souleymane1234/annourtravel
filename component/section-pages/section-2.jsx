@@ -69,6 +69,8 @@ const Section = () => {
 
   return (
     <div style={{ backgroundColor: "#1f2024" }}>
+    <div className='container p-5'>
+    <h2 className="text-center text-white">Formlulaire de demandes</h2>
     <form onSubmit={handleSubmit}>
       {/* Champs Nom et Numéro */}
       <div className="row mb-3">
@@ -170,6 +172,7 @@ const Section = () => {
         <button type="submit" className="btn btn-primary">Envoyer</button>
       </div>
     </form>
+    </div>
     </div>
   );
 };

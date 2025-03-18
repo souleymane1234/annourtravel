@@ -6,10 +6,16 @@ import Link from 'next/link';
 
 
 const Section = () => {
-   const videoId = 'PtD09yuh4gU';
+   const videoId = 'QB2DfxkaBeU';
     return(
         <Parallax className="home-video">
-                <div className="iframeyoutube"><YouTubePlayer videoId={videoId} /></div>
+                {/* <div className="iframeyoutube"><YouTubePlayer videoId={videoId} /></div> */}
+                <div className="iframeyoutube">
+      <video width="100%" height="auto" controls autoPlay loop>
+        <source src="/video/local-video-1.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
                 
                 <div className="de-gradient-edge-top"></div>
                 <div className="de-gradient-edge-bottom"></div>
