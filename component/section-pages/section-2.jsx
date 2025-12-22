@@ -27,7 +27,7 @@ const Section = () => {
     event.preventDefault(); // Empêche le rechargement de la page
 
     try {
-      const response = await fetch("https://api.annour-travel.com/client", {
+      const response = await fetch("https://api.annour-travel.com/clients", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,10 +57,10 @@ const Section = () => {
       });
     } catch (error) {
       console.error("Erreur:", error);
-      setErrorMessage("Une erreur est survenue");
+      setErrorMessage(error.message || "Une erreur est survenue lors de l'envoi du formulaire");
       Swal.fire({
         title: "Erreur",
-        text: error.message,
+        text: error.message || "Une erreur est survenue. Veuillez réessayer.",
         icon: "error",
         confirmButtonText: "OK",
       });
@@ -70,7 +70,7 @@ const Section = () => {
   return (
     <div style={{ backgroundColor: "#1f2024" }}>
     <div className='container p-5'>
-    <h2 className="text-center text-white">Formlulaire de demandes</h2>
+    <h2 className="text-center text-white">Formulaire de demandes</h2>
     <form onSubmit={handleSubmit}>
       {/* Champs Nom et Numéro */}
       <div className="row mb-3">

@@ -4,15 +4,58 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import {isMobile} from 'react-device-detect';
 
-const image1 ="../../img/slider/slide1.jpg";
-const image2 ="../../img/slider/slide2.jpg";
-const image3 ="../../img/slider/slide3.jpg";
-const image4 ="../../img/slider/slide4.jpg";
-const image5 ="../../img/slider/slide5.jpg";
-const image6 ="../../img/slider/slide6.jpg";
+// Images par défaut en cas d'erreur de chargement de l'API
+const defaultImages = {
+  image1: "../../img/slider/slide1.jpg",
+  image2: "../../img/slider/slide2.jpg",
+  image3: "../../img/slider/slide3.jpg",
+  image4: "../../img/slider/slide4.jpg",
+  image5: "../../img/slider/slide5.jpg",
+  image6: "../../img/slider/slide6.jpg"
+};
 
 const YourComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
+  const [slides, setSlides] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Charger les slides depuis l'API
+    const fetchSlides = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}/api/slides`);
+        if (response.ok) {
+          const data = await response.json();
+          // Trier par ordre d'affichage (l'API utilise slideOrder)
+          if (Array.isArray(data)) {
+            const activeSlides = data
+              .filter(slide => slide && (slide.isActive !== false))
+              .sort((a, b) => (a.slideOrder || 0) - (b.slideOrder || 0));
+            setSlides(activeSlides);
+          }
+        } else {
+          console.warn('Erreur lors du chargement des slides, utilisation des slides par défaut');
+        }
+      } catch (error) {
+        console.error('Erreur lors du chargement des slides:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSlides();
+  }, []);
+
+  // Si les slides sont en cours de chargement ou s'il n'y en a pas, utiliser les slides par défaut
+  const slidesToRender = slides.length > 0 ? slides : [
+    { id: 1, imageUrl: defaultImages.image3, thumbnailUrl: defaultImages.image3, subtitle: "", title: "", description: "" },
+    { id: 2, imageUrl: defaultImages.image1, thumbnailUrl: defaultImages.image1, subtitle: "DUBAI", title: "Voyager simplement", description: "" },
+    { id: 3, imageUrl: defaultImages.image5, thumbnailUrl: defaultImages.image5, subtitle: "FRANCE", title: "Voyager simplement", description: "" },
+    { id: 4, imageUrl: defaultImages.image2, thumbnailUrl: defaultImages.image2, subtitle: "CANADA", title: "Voyager simplement", description: "" },
+    { id: 5, imageUrl: defaultImages.image4, thumbnailUrl: defaultImages.image4, subtitle: "CHINE", title: "Voyager simplement", description: "" },
+    { id: 6, imageUrl: defaultImages.image6, thumbnailUrl: defaultImages.image6, subtitle: "IATA", title: "Nous sommes certifié IATA", description: "" },
+  ];
+
   return (
     <div className="doubleslider">
     <Swiper
@@ -28,36 +71,19 @@ const YourComponent = () => {
       pagination={{ clickable: true, }}
       autoplay={{ delay: 3000 }}
     >
-                <SwiperSlide>
+      {slidesToRender.map((slide, index) => {
+        // Construire l'URL complète pour les images de l'API
+        const imageUrl = typeof slide.imageUrl === 'string' && slide.imageUrl.startsWith('/uploads')
+          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${slide.imageUrl}`
+          : slide.imageUrl;
+        const thumbnailUrl = slide.thumbnailUrl && typeof slide.thumbnailUrl === 'string' && slide.thumbnailUrl.startsWith('/uploads')
+          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${slide.thumbnailUrl}`
+          : (slide.thumbnailUrl || imageUrl);
+
+        return (
+        <SwiperSlide key={slide.id || index}>
           <div className="swiper-inner" style={{
-                                                backgroundImage: `url(${image3})`,
-                                                width: '100%',
-                                                height: '100%',
-                                                // backgroundPosition: "center",
-                                                // backgroundRepeat: "no-repeat",
-                                                // backgroundSize: "cover"
-                                              }}>
-              <div className="sw-caption">
-                  <div className="container">
-                      <div className="row gx-5 align-items-center text-center">
-                          {/* <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">Tournois en cours</div>
-                              <h1 className="slider-title text-uppercase mb-1">Hisse toi au sommet de l&apos;arènne et gagne de nombreux lots</h1>
-                          </div> */}
-                          <div className="col-lg-6 mx-auto">
-                              {/* <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p> */}
-                              <div className="spacer-10"></div>
-                              <Link className="btn-main mb10" href="#">Contactez nous</Link>
-                          </div>
-                      </div>
-                  </div>
-              </div>                                
-              <div className="sw-overlay"></div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-inner" style={{
-                                                backgroundImage: `url(${image1})`,
+            backgroundImage: `url(${imageUrl})`,
                                                 width: '100%',
                                                 height: '100%',
                                                 backgroundPosition: "center",
@@ -67,206 +93,55 @@ const YourComponent = () => {
               <div className="sw-caption">
                   <div className="container">
                       <div className="row gx-5 align-items-center text-center">
+                  {slide.subtitle && slide.title && (
                           <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">DUBAI</div>
-                              <h1 className="slider-title text-uppercase mb-1">Voyager simplement</h1>
+                      {slide.subtitle && <div className="subtitle blink mb-4">{slide.subtitle}</div>}
+                      {slide.title && <h1 className="slider-title text-uppercase mb-1">{slide.title}</h1>}
                           </div>
+                  )}
                           <div className="col-lg-6 mx-auto">
-                              {/* <p className="slider-text">Reçois les informations sur l'univers du gaming, des bons plans, participes au quiz et gagne des lots facilement</p> */}
+                    {slide.description && <p className="slider-text">{slide.description}</p>}
                               <div className="spacer-10"></div>
-                              <Link className="btn-main mb10" href="#">Contactez nous</Link>
+                    <Link className="btn-main mb10" href={slide.buttonLink || "#contact"}>
+                      {slide.buttonText || "Contactez nous"}
+                    </Link>
                           </div>
                       </div>
                   </div>
               </div>
-              <div className="sw-overlay"></div>
+            <div className="sw-overlay"></div>
           </div> 
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-inner" style={{
-                                                backgroundImage: `url(${image5})`,
-                                                width: '100%',
-                                                height: '100%',
-                                                backgroundPosition: "center",
-                                                backgroundRepeat: "no-repeat",
-                                                backgroundSize: "cover"
-                                              }}>
-              <div className="sw-caption">
-                  <div className="container">
-                      <div className="row gx-5 align-items-center text-center">
-                          <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">FRANCE</div>
-                              <h1 className="slider-title text-uppercase mb-1">Voyager simplement</h1>
-                          </div>
-                          <div className="col-lg-6 mx-auto">
-                              {/* <p className="slider-text">Achète des codes de contenu de jeux, de contenu de streaming audio & video, mais aussi des console dans notre boutique officiel</p> */}
-                              <div className="spacer-10"></div>
-                              <Link className="btn-main mb10" href="#">Contactez nous</Link>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="sw-overlay"></div>
-          </div>         
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-inner" style={{
-                                                backgroundImage: `url(${image2})`,
-                                                width: '100%',
-                                                height: '100%',
-                                                backgroundPosition: "center",
-                                                backgroundRepeat: "no-repeat",
-                                                backgroundSize: "cover"
-                                                // backgroundPosition: "center",
-                                                // background-repeat: no-repeat,
-                                                // background-size: cover,
-
-                                              }}>
-              <div className="sw-caption">
-                  <div className="container">
-                      <div className="row gx-5 align-items-center text-center">
-                          <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">CANADA</div>
-                              <h1 className="slider-title text-uppercase mb-1">Voyager simplement</h1>
-                          </div>
-                          <div className="col-lg-6 mx-auto">
-                              {/* <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p> */}
-                              <div className="spacer-10"></div>
-                              <Link className="btn-main mb10" href="#">Contactez nous</Link>
-                          </div>
-                      </div>
-                  </div>
-              </div>                                
-              <div className="sw-overlay"></div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-inner" style={{
-                                                backgroundImage: `url(${image4})`,
-                                                width: '100%',
-                                                height: '100%',
-                                                backgroundPosition: "center",
-                                                backgroundRepeat: "no-repeat",
-                                                backgroundSize: "cover"
-                                              }}>
-              <div className="sw-caption">
-                  <div className="container">
-                      <div className="row gx-5 align-items-center text-center">
-                          <div className="col-lg-8 mb-sm-30 mx-auto">
-                              <div className="subtitle blink mb-4">CHINE</div>
-                              <h1 className="slider-title text-uppercase mb-1">Voyager simplement</h1>
-                          </div>
-                          <div className="col-lg-6 mx-auto">
-                              {/* <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p> */}
-                              <div className="spacer-10"></div>
-                              <Link className="btn-main mb10" href="#">Contactez nous</Link>
-                          </div>
-                      </div>
-                  </div>
-              </div>                                
-              <div className="sw-overlay"></div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-inner" style={{
-                                              backgroundImage: `url(${image6})`,
-                                              width: '100%',
-                                              height: '100%',
-                                              backgroundPosition: "center",
-                                                backgroundRepeat: "no-repeat",
-                                                backgroundSize: "cover"
-                                            }}>
-            <div className="sw-caption">
-                <div className="container">
-                    <div className="row gx-5 align-items-center text-center">
-                        <div className="col-lg-8 mb-sm-30 mx-auto">
-                            <div className="subtitle blink mb-4">IATA</div>
-                            <h1 className="slider-title text-uppercase mb-1">Nous sommes certifié IATA</h1>
-                        </div>
-                        <div className="col-lg-6 mx-auto">
-                            {/* <p className="slider-text">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore.</p> */}
-                            <div className="spacer-10"></div>
-                            <Link className="btn-main mb10" href="#">Contactez nous</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>                                
-            <div className="sw-overlay"></div>
-          </div>
-        </SwiperSlide>
-      {/* Add more slides here */}
+        );
+      })}
     </Swiper>
     <Swiper
-        direction={isMobile ? 'horizontal':'vertical'}
-        onSwiper={setThumbsSwiper}
-        watchSlidesProgress
-        freeMode={true}
-        spaceBetween={10}
-        slidesPerView={3}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="thumb-slider"
-      >
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image3})`,
-                                            }}>
+      direction={isMobile ? 'horizontal' : 'vertical'}
+      onSwiper={setThumbsSwiper}
+      watchSlidesProgress
+      freeMode={true}
+      spaceBetween={10}
+      slidesPerView={3}
+      modules={[FreeMode, Navigation, Thumbs]}
+      className="thumb-slider"
+    >
+      {slidesToRender.map((slide, index) => {
+        // Construire l'URL complète pour les thumbnails
+        const thumbUrl = slide.thumbnailUrl || slide.imageUrl;
+        const finalThumbUrl = typeof thumbUrl === 'string' && thumbUrl.startsWith('/uploads')
+          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${thumbUrl}`
+          : thumbUrl;
+
+        return (
+        <SwiperSlide key={`thumb-${slide.id || index}`} className="swiper-slide" style={{
+          backgroundImage: `url(${finalThumbUrl})`,
+        }}>
           <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +3K LOTS
-              </span> */}
-              <h3>NOS SERVICES</h3>
+            <h3>{slide.thumbnailTitle || slide.subtitle || slide.title || `Slide ${index + 1}`}</h3>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image1})`,
-                                            }}>
-          <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +200 ARTICLES
-              </span> */}
-              <h3>DUBAI</h3>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image5})`,
-                                            }}>
-          <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +21 CHALLENGES
-              </span> */}
-              <h3>FRANCE</h3>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image2})`,
-                                            }}>
-          <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +4 ÉMISSIONS
-              </span> */}
-              <h3>CANADA</h3>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image4})`,
-                                            }}>
-          <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +2K GAMERS
-              </span> */}
-              <h3>CHINE</h3>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide" style={{
-                                              backgroundImage: `url(${image6})`,
-                                            }}>
-          <div className="sw-caption-thumb">
-              {/* <span className="d-tag">
-                  +15 LIVES
-              </span> */}
-              <h3>IATA</h3>
-          </div>
-        </SwiperSlide>
-        {/* Add more thumbnail slides here */}
+        );
+      })}
       </Swiper>
     </div>
   );

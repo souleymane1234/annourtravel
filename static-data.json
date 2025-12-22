@@ -1,0 +1,242 @@
+{
+  "slides": [
+    {
+      "id": "1",
+      "imageUrl": "../../img/slider/slide3.jpg",
+      "thumbnailUrl": "../../img/slider/slide3.jpg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "NOS SERVICES",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 1,
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "imageUrl": "../../img/slider/slide1.jpg",
+      "thumbnailUrl": "../../img/slider/slide1.jpg",
+      "subtitle": "DUBAI",
+      "title": "Voyager simplement",
+      "description": "",
+      "thumbnailTitle": "DUBAI",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 2,
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "imageUrl": "../../img/slider/slide5.jpg",
+      "thumbnailUrl": "../../img/slider/slide5.jpg",
+      "subtitle": "FRANCE",
+      "title": "Voyager simplement",
+      "description": "",
+      "thumbnailTitle": "FRANCE",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 3,
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "imageUrl": "../../img/slider/slide2.jpg",
+      "thumbnailUrl": "../../img/slider/slide2.jpg",
+      "subtitle": "CANADA",
+      "title": "Voyager simplement",
+      "description": "",
+      "thumbnailTitle": "CANADA",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 4,
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "imageUrl": "../../img/slider/slide4.jpg",
+      "thumbnailUrl": "../../img/slider/slide4.jpg",
+      "subtitle": "CHINE",
+      "title": "Voyager simplement",
+      "description": "",
+      "thumbnailTitle": "CHINE",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 5,
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "imageUrl": "../../img/slider/slide6.jpg",
+      "thumbnailUrl": "../../img/slider/slide6.jpg",
+      "subtitle": "IATA",
+      "title": "Nous sommes certifié IATA",
+      "description": "",
+      "thumbnailTitle": "IATA",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 6,
+      "isActive": true
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Achat et réservation de billet",
+      "imageUrl": "../../img/slider/billet.jpg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Assistance visa",
+      "imageUrl": "../../img/slider/visa.jpg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Réservation d'hotel",
+      "imageUrl": "../../img/slider/reservation.jpg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Assurance de voyage",
+      "imageUrl": "../../img/slider/assurance.jpg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Attestation de voyage",
+      "imageUrl": "../../img/slider/attestation.jpg",
+      "description": "",
+      "isActive": true
+    }
+  ],
+  "partnerLogos": [
+    {
+      "id": "1",
+      "name": "Air Ivoire",
+      "logoUrl": "../../img/partenaires/airivoire.jpg",
+      "websiteUrl": "",
+      "logoOrder": 1,
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Air France",
+      "logoUrl": "../../img/partenaires/airfrance.jpg",
+      "websiteUrl": "",
+      "logoOrder": 2,
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Emirates",
+      "logoUrl": "../../img/partenaires/emirates.jpg",
+      "websiteUrl": "",
+      "logoOrder": 3,
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Royal Air Maroc",
+      "logoUrl": "../../img/partenaires/ram.jpg",
+      "websiteUrl": "",
+      "logoOrder": 4,
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Sky Airlines",
+      "logoUrl": "../../img/partenaires/sky.jpg",
+      "websiteUrl": "",
+      "logoOrder": 5,
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "name": "Corsair",
+      "logoUrl": "../../img/partenaires/corsair.jpg",
+      "websiteUrl": "",
+      "logoOrder": 6,
+      "isActive": true
+    },
+    {
+      "id": "7",
+      "name": "EgyptAir",
+      "logoUrl": "../../img/partenaires/egypteair.jpg",
+      "websiteUrl": "",
+      "logoOrder": 7,
+      "isActive": true
+    },
+    {
+      "id": "8",
+      "name": "AS Airlines",
+      "logoUrl": "../../img/partenaires/as.jpg",
+      "websiteUrl": "",
+      "logoOrder": 8,
+      "isActive": true
+    },
+    {
+      "id": "9",
+      "name": "Kenya Airways",
+      "logoUrl": "../../img/partenaires/kenya.jpg",
+      "websiteUrl": "",
+      "logoOrder": 9,
+      "isActive": true
+    },
+    {
+      "id": "10",
+      "name": "Brussels Airlines",
+      "logoUrl": "../../img/partenaires/brussels.jpg",
+      "websiteUrl": "",
+      "logoOrder": 10,
+      "isActive": true
+    },
+    {
+      "id": "11",
+      "name": "Air Burkina",
+      "logoUrl": "../../img/partenaires/airburkina.jpg",
+      "websiteUrl": "",
+      "logoOrder": 11,
+      "isActive": true
+    },
+    {
+      "id": "12",
+      "name": "Qatar Airways",
+      "logoUrl": "../../img/partenaires/qatar.jpg",
+      "websiteUrl": "",
+      "logoOrder": 12,
+      "isActive": true
+    },
+    {
+      "id": "13",
+      "name": "Tunisair",
+      "logoUrl": "../../img/partenaires/tunisair.jpg",
+      "websiteUrl": "",
+      "logoOrder": 13,
+      "isActive": true
+    },
+    {
+      "id": "14",
+      "name": "Air Algérie",
+      "logoUrl": "../../img/partenaires/algerie.jpg",
+      "websiteUrl": "",
+      "logoOrder": 14,
+      "isActive": true
+    },
+    {
+      "id": "15",
+      "name": "Air Mauritanie",
+      "logoUrl": "../../img/partenaires/mauritanie.jpg",
+      "websiteUrl": "",
+      "logoOrder": 15,
+      "isActive": true
+    }
+  ]
+}
+

@@ -19,7 +19,7 @@ const Sectioncol = () => {
                 <div className="col-lg-4 col-md-6 mb-sm-30">
                     <h3>Need Support?</h3>
                         <p>Duis aliqua ex nostrud eiusmod esse esse reprehenderit non esse elit dolore sed qui cupidatat magna occaecat officia ut exercitation eu sed est elit id commodo.</p>
-                        <Link className="btn-line lg-w-50" href="#">Contact Support</Link>
+                        <Link className="btn-line lg-w-50" href="#contact">Contact Support</Link>
                 </div>
             </div>
         </div>

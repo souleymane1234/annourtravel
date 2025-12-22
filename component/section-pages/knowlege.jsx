@@ -94,7 +94,7 @@ const Section = () => {
                                 <h4>Cannot find answer? Contact our customer support now.</h4>
                             </div>
                             <div className="col-lg-2 text-lg-end">
-                                <Link className="btn-main" href="#">Contact Us</Link>
+                                <Link className="btn-main" href="#contact">Contact Us</Link>
                             </div>
                         </div>
                     </div>
