@@ -3,6 +3,7 @@ import { Navigation, Pagination, Autoplay, A11y, Thumbs, FreeMode } from 'swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import {isMobile} from 'react-device-detect';
+import { fetchSiteApi, resolveMediaUrl } from '../../lib/site-api';
 
 // Images par défaut en cas d'erreur de chargement de l'API
 const defaultImages = {
@@ -17,33 +18,28 @@ const defaultImages = {
 const YourComponent = () => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   const [slides, setSlides] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Charger les slides depuis l'API
+    const controller = new AbortController();
+
     const fetchSlides = async () => {
-      try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}/api/slides`);
-        if (response.ok) {
-          const data = await response.json();
-          // Trier par ordre d'affichage (l'API utilise slideOrder)
-          if (Array.isArray(data)) {
-            const activeSlides = data
-              .filter(slide => slide && (slide.isActive !== false))
-              .sort((a, b) => (a.slideOrder || 0) - (b.slideOrder || 0));
-            setSlides(activeSlides);
-          }
-        } else {
-          console.warn('Erreur lors du chargement des slides, utilisation des slides par défaut');
-        }
-      } catch (error) {
-        console.error('Erreur lors du chargement des slides:', error);
-      } finally {
-        setLoading(false);
+      const data = await fetchSiteApi('/api/slides', controller.signal);
+      if (!Array.isArray(data) || data.length === 0) {
+        return;
+      }
+
+      const activeSlides = data
+        .filter(slide => slide && (slide.isActive !== false))
+        .sort((a, b) => (a.slideOrder || 0) - (b.slideOrder || 0));
+
+      if (activeSlides.length > 0) {
+        setSlides(activeSlides);
       }
     };
 
     fetchSlides();
+
+    return () => controller.abort();
   }, []);
 
   // Si les slides sont en cours de chargement ou s'il n'y en a pas, utiliser les slides par défaut
@@ -73,11 +69,11 @@ const YourComponent = () => {
     >
       {slidesToRender.map((slide, index) => {
         // Construire l'URL complète pour les images de l'API
-        const imageUrl = typeof slide.imageUrl === 'string' && slide.imageUrl.startsWith('/uploads')
-          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${slide.imageUrl}`
+        const imageUrl = typeof slide.imageUrl === 'string'
+          ? (resolveMediaUrl(slide.imageUrl) || slide.imageUrl)
           : slide.imageUrl;
-        const thumbnailUrl = slide.thumbnailUrl && typeof slide.thumbnailUrl === 'string' && slide.thumbnailUrl.startsWith('/uploads')
-          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${slide.thumbnailUrl}`
+        const thumbnailUrl = typeof slide.thumbnailUrl === 'string'
+          ? (resolveMediaUrl(slide.thumbnailUrl) || slide.thumbnailUrl)
           : (slide.thumbnailUrl || imageUrl);
 
         return (
@@ -128,8 +124,8 @@ const YourComponent = () => {
       {slidesToRender.map((slide, index) => {
         // Construire l'URL complète pour les thumbnails
         const thumbUrl = slide.thumbnailUrl || slide.imageUrl;
-        const finalThumbUrl = typeof thumbUrl === 'string' && thumbUrl.startsWith('/uploads')
-          ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${thumbUrl}`
+        const finalThumbUrl = typeof thumbUrl === 'string'
+          ? (resolveMediaUrl(thumbUrl) || thumbUrl)
           : thumbUrl;
 
         return (

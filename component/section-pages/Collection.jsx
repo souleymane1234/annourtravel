@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link'; 
 import { Parallax } from "react-parallax";
 import Image from 'next/image';
+import { fetchSiteApi, resolveMediaUrl } from '../../lib/site-api';
 
 // Images par défaut en cas d'erreur de chargement de l'API
 import image1 from '../../public/img/slider/billet.jpg';
@@ -20,33 +21,28 @@ const defaultServices = [
 
 const collection = () => {
     const [services, setServices] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Charger les services depuis l'API
+        const controller = new AbortController();
+
         const fetchServices = async () => {
-            try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}/api/site-admin/services`);
-                if (response.ok) {
-                    const data = await response.json();
-                    // Filtrer les services actifs et trier (l'API peut retourner avec un champ d'ordre)
-                    if (Array.isArray(data)) {
-                        const activeServices = data
-                            .filter(service => service && (service.isActive !== false))
-                            .sort((a, b) => (a.order || 0) - (b.order || 0));
-                        setServices(activeServices);
-                    }
-                } else {
-                    console.warn('Erreur lors du chargement des services, utilisation des services par défaut');
-                }
-            } catch (error) {
-                console.error('Erreur lors du chargement des services:', error);
-            } finally {
-                setLoading(false);
+            const data = await fetchSiteApi('/api/site-admin/services', controller.signal);
+            if (!Array.isArray(data) || data.length === 0) {
+                return;
+            }
+
+            const activeServices = data
+                .filter(service => service && (service.isActive !== false))
+                .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+            if (activeServices.length > 0) {
+                setServices(activeServices);
             }
         };
 
         fetchServices();
+
+        return () => controller.abort();
     }, []);
 
     // Utiliser les services de l'API ou les services par défaut
@@ -75,8 +71,8 @@ const collection = () => {
                         </div>
                         {(() => {
                             // Gérer les URLs d'images (locales ou API)
-                            const imageSrc = typeof item.imageUrl === 'string' && item.imageUrl.startsWith('/uploads')
-                                ? `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${item.imageUrl}`
+                            const imageSrc = typeof item.imageUrl === 'string'
+                                ? (resolveMediaUrl(item.imageUrl) || item.imageUrl)
                                 : (item.imageUrl?.src || item.imageUrl || image1);
                             
                             return (

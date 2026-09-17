@@ -7,6 +7,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { fetchSiteApi, resolveMediaUrl } from '../../lib/site-api';
 
 // Images par défaut en cas d'erreur de chargement de l'API
 import image1 from "../../public/img/partenaires/airivoire.jpg";
@@ -38,33 +39,32 @@ interface PartnerLogo {
 
 const InfiniteLogoSlider = () => {
   const [logos, setLogos] = useState<PartnerLogo[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Charger les logos partenaires depuis l'API
+    const controller = new AbortController();
+
     const fetchLogos = async () => {
-      try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}/api/site-admin/partner-logos`);
-        if (response.ok) {
-          const data = await response.json();
-          // Filtrer les logos actifs et trier par logoOrder
-          if (Array.isArray(data)) {
-            const activeLogos = data
-              .filter(logo => logo && (logo.isActive !== false))
-              .sort((a, b) => (a.logoOrder || 0) - (b.logoOrder || 0));
-            setLogos(activeLogos);
-          }
-        } else {
-          console.warn('Erreur lors du chargement des logos partenaires, utilisation des logos par défaut');
-        }
-      } catch (error) {
-        console.error('Erreur lors du chargement des logos partenaires:', error);
-      } finally {
-        setLoading(false);
+      const data = await fetchSiteApi<PartnerLogo[]>(
+        '/api/site-admin/partner-logos',
+        controller.signal
+      );
+
+      if (!Array.isArray(data) || data.length === 0) {
+        return;
+      }
+
+      const activeLogos = data
+        .filter((logo) => logo && logo.isActive !== false)
+        .sort((a, b) => (a.logoOrder || 0) - (b.logoOrder || 0));
+
+      if (activeLogos.length > 0) {
+        setLogos(activeLogos);
       }
     };
 
     fetchLogos();
+
+    return () => controller.abort();
   }, []);
 
   // Utiliser les logos de l'API ou les logos par défaut
@@ -106,11 +106,7 @@ const InfiniteLogoSlider = () => {
             
             // Si logoUrl est une chaîne
             if (typeof logoUrl === 'string') {
-              if (logoUrl.startsWith('/uploads')) {
-                logoSrc = `${process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com'}${logoUrl}`;
-              } else {
-                logoSrc = logoUrl;
-              }
+              logoSrc = resolveMediaUrl(logoUrl) || logoUrl;
             } 
             // Si logoUrl est un StaticImageData (image importée)
             else if (logoUrl && typeof logoUrl === 'object' && 'src' in logoUrl) {

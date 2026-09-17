@@ -1,3 +1,5 @@
+const apiOrigin = process.env.NEXT_PUBLIC_API_URL || 'https://api.annour-travel.com';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -14,6 +16,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: true, //will change to false later
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/backend-api/:path*',
+        destination: `${apiOrigin}/:path*`,
+      },
+    ];
   },
 }
 
