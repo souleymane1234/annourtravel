@@ -1,19 +1,6 @@
 {
   "slides": [
     {
-      "id": "1",
-      "imageUrl": "../../img/slider/slide3.jpg",
-      "thumbnailUrl": "../../img/slider/slide3.jpg",
-      "subtitle": "",
-      "title": "",
-      "description": "",
-      "thumbnailTitle": "NOS SERVICES",
-      "buttonText": "Contactez nous",
-      "buttonLink": "#contact",
-      "slideOrder": 1,
-      "isActive": true
-    },
-    {
       "id": "2",
       "imageUrl": "../../img/slider/slide1.jpg",
       "thumbnailUrl": "../../img/slider/slide1.jpg",
@@ -66,16 +53,107 @@
       "isActive": true
     },
     {
-      "id": "6",
-      "imageUrl": "../../img/slider/slide6.jpg",
-      "thumbnailUrl": "../../img/slider/slide6.jpg",
-      "subtitle": "IATA",
-      "title": "Nous sommes certifié IATA",
+      "id": "7",
+      "imageUrl": "../../img/slider/slide7.jpeg",
+      "thumbnailUrl": "../../img/slider/slide7.jpeg",
+      "subtitle": "",
+      "title": "",
       "description": "",
-      "thumbnailTitle": "IATA",
+      "thumbnailTitle": "",
       "buttonText": "Contactez nous",
       "buttonLink": "#contact",
-      "slideOrder": 6,
+      "slideOrder": 7,
+      "isActive": true
+    },
+    {
+      "id": "8",
+      "imageUrl": "../../img/slider/slide8.jpeg",
+      "thumbnailUrl": "../../img/slider/slide8.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 8,
+      "isActive": true
+    },
+    {
+      "id": "9",
+      "imageUrl": "../../img/slider/slide9.jpeg",
+      "thumbnailUrl": "../../img/slider/slide9.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 9,
+      "isActive": true
+    },
+    {
+      "id": "10",
+      "imageUrl": "../../img/slider/slide10.jpeg",
+      "thumbnailUrl": "../../img/slider/slide10.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 10,
+      "isActive": true
+    },
+    {
+      "id": "11",
+      "imageUrl": "../../img/slider/slide11.jpeg",
+      "thumbnailUrl": "../../img/slider/slide11.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 11,
+      "isActive": true
+    },
+    {
+      "id": "12",
+      "imageUrl": "../../img/slider/slide12.jpeg",
+      "thumbnailUrl": "../../img/slider/slide12.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 12,
+      "isActive": true
+    },
+    {
+      "id": "13",
+      "imageUrl": "../../img/slider/slide13.jpeg",
+      "thumbnailUrl": "../../img/slider/slide13.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 13,
+      "isActive": true
+    },
+    {
+      "id": "14",
+      "imageUrl": "../../img/slider/slide14.jpeg",
+      "thumbnailUrl": "../../img/slider/slide14.jpeg",
+      "subtitle": "",
+      "title": "",
+      "description": "",
+      "thumbnailTitle": "",
+      "buttonText": "Contactez nous",
+      "buttonLink": "#contact",
+      "slideOrder": 14,
       "isActive": true
     }
   ],
@@ -112,6 +190,62 @@
       "id": "5",
       "name": "Attestation de voyage",
       "imageUrl": "../../img/slider/attestation.jpg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "name": "Vivre en Irlande",
+      "imageUrl": "../../img/slider/slide7.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "7",
+      "name": "Travaillez en Serbie",
+      "imageUrl": "../../img/slider/slide8.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "8",
+      "name": "Vivre aux Pays-Bas",
+      "imageUrl": "../../img/slider/slide9.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "9",
+      "name": "Visa Turquie",
+      "imageUrl": "../../img/slider/slide10.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "10",
+      "name": "Vivre en Roumanie",
+      "imageUrl": "../../img/slider/slide11.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "11",
+      "name": "Travaillez au Portugal",
+      "imageUrl": "../../img/slider/slide12.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "12",
+      "name": "Travaillez en Pologne",
+      "imageUrl": "../../img/slider/slide13.jpeg",
+      "description": "",
+      "isActive": true
+    },
+    {
+      "id": "13",
+      "name": "Vivre en Belgique",
+      "imageUrl": "../../img/slider/slide14.jpeg",
       "description": "",
       "isActive": true
     }

@@ -10,6 +10,14 @@ import image2 from '../../public/img/slider/visa.jpg';
 import image3 from '../../public/img/slider/reservation.jpg';
 import image4 from '../../public/img/slider/assurance.jpg';
 import image5 from '../../public/img/slider/attestation.jpg';
+import irlande from '../../public/img/slider/slide7.jpeg';
+import serbie from '../../public/img/slider/slide8.jpeg';
+import paysBas from '../../public/img/slider/slide9.jpeg';
+import turquie from '../../public/img/slider/slide10.jpeg';
+import roumanie from '../../public/img/slider/slide11.jpeg';
+import portugal from '../../public/img/slider/slide12.jpeg';
+import pologne from '../../public/img/slider/slide13.jpeg';
+import belgique from '../../public/img/slider/slide14.jpeg';
 
 const defaultServices = [
     { id: 1, name: "Achat et réservation de billet", imageUrl: image1, description: "" },
@@ -17,6 +25,14 @@ const defaultServices = [
     { id: 3, name: "Réservation d'hotel", imageUrl: image3, description: "" },
     { id: 4, name: "Assurance de voyage", imageUrl: image4, description: "" },
     { id: 5, name: "Attestation de voyage", imageUrl: image5, description: "" },
+    { id: 6, name: "Vivre en Irlande", imageUrl: irlande, description: "" },
+    { id: 7, name: "Travaillez en Serbie", imageUrl: serbie, description: "" },
+    { id: 8, name: "Vivre aux Pays-Bas", imageUrl: paysBas, description: "" },
+    { id: 9, name: "Visa Turquie", imageUrl: turquie, description: "" },
+    { id: 10, name: "Vivre en Roumanie", imageUrl: roumanie, description: "" },
+    { id: 11, name: "Travaillez au Portugal", imageUrl: portugal, description: "" },
+    { id: 12, name: "Travaillez en Pologne", imageUrl: pologne, description: "" },
+    { id: 13, name: "Vivre en Belgique", imageUrl: belgique, description: "" },
 ];
 
 const collection = () => {

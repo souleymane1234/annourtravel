@@ -134,6 +134,13 @@ const Section = () => {
             <option value="VisaMaroc">Visa Maroc</option>
             <option value="VisaTurquie">Visa Turquie</option>
             <option value="VisaSchengen">Visa Schengen (France, Espagne)</option>
+            <option value="VivreIrlande">Vivre en Irlande</option>
+            <option value="TravailSerbie">Travaillez en Serbie</option>
+            <option value="VivrePaysBas">Vivre aux Pays-Bas</option>
+            <option value="VivreRoumanie">Vivre en Roumanie</option>
+            <option value="TravailPortugal">Travaillez au Portugal</option>
+            <option value="TravailPologne">Travaillez en Pologne</option>
+            <option value="VivreBelgique">Vivre en Belgique</option>
             <option value="BilletAvion">Billet d’avion</option>
             <option value="ReservationHotel">Réservation d’hôtel</option>
             <option value="CircuitDubai">Package circuit Touristique Dubaï</option>
